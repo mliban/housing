@@ -1,35 +1,36 @@
 @charset "UTF-8";
 
+small{
+  color:#666 !important;
+}
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-.overlay-text p{
-  font-family: 'Roboto Slab', cursive !important;
-}
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 @font-face {
     font-family: glyphicons-halflings;
-    src: url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.eot");
-    src: url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
-         url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.woff2") format("woff2"),
-         url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.woff") format("woff"),
-         url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.ttf") format("truetype"),
-         url("http://housing.staging.vcu.edu//housing/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
+    src: url("/media/housing/fonts/glyphicons-halflings-regular.eot");
+    src: url("/media/housing/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+         url("/media/housing/fonts/glyphicons-halflings-regular.woff2") format("woff2"),
+         url("/media/housing/fonts/glyphicons-halflings-regular.woff") format("woff"),
+         url("/media/housing/fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+         url("/media/housing/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
 }
 
 @font-face {
     font-family: SummerHeart;
-    src: url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.eot");
-    src: url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.eot#iefix") format("embedded-opentype"),
-         url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.woff2") format("woff2"),
-         url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.woff") format("woff"),
-         url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.ttf") format("truetype"),
-         url("http://housing.staging.vcu.edu//housing/fonts/SummerHearts-Regular.svg#svgFontName") format("svg")
+    src: url("/media/housing/fonts/SummerHearts-Regular.eot");
+    src: url("/media/housing/fonts/SummerHearts-Regular.eot#iefix") format("embedded-opentype"),
+         url("/media/housing/fonts/SummerHearts-Regular.woff2") format("woff2"),
+         url("/media/housing/fonts/SummerHearts-Regular.woff") format("woff"),
+         url("/media/housing/fonts/SummerHearts-Regular.ttf") format("truetype"),
+         url("/media/housing/fonts/SummerHearts-Regular.svg#svgFontName") format("svg")
 }
 
   /* SUPPLEMENT */
@@ -81,9 +82,16 @@
             top:520px;
             margin-top:-520px;
            }
-           /*.rlhProfile p{
-           	height:130px;
-           }*/
+           /* Font update on overlay text in grids and hero images */
+          .overlay-text h1,
+          .overlay-text p{
+            font-family: 'Roboto Slab', serif !important;
+          }
+
+          /* Profile fix in About section */
+          .rlhProfile .col-sm-3{
+            height:500px;
+          }
 
 		/* ACCESSIBILITY */
           a:hover, a:focus {
@@ -12208,7 +12216,7 @@ footer#footer .contact-info-md hr {
 footer#footer .contact-info-md li,
 footer#footer .contact-info-md p {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 100%;
     color: #000
 }
 
@@ -12341,13 +12349,24 @@ nav {
     top: 0;
     width: 100%;
     text-align: center;
+}
+
+.rlhMobile {
+    position: fixed;
+    z-index: 17;
+    bottom: 30px;
+    left:30px;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    text-align: center;
     border-bottom: 1px solid #e6a700;
-    background-color: #ffba00
+    background-color: #ffba00;
 }
 
 nav .main-nav {
     height: 64px;
-    padding: 16px 0
+
 }
 
 nav .main-nav .desktop {
@@ -12356,12 +12375,8 @@ nav .main-nav .desktop {
 
 nav .main-nav .mobile .menu-btn {
     display: inline-block;
-    float: left
-}
-
-nav .main-nav .mobile .logo {
-    display: inline-block;
-    padding-right: 10px
+    margin-top:8px;
+    margin-left:-2px;
 }
 
 nav .main-nav .mobile .logo img {
